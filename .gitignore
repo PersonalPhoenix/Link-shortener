@@ -1,0 +1,12 @@
+__pycache__
+
+webpack
+
+.env
+
+db.sqlite3
+
+pyvenv.cfg
+Scripts
+Lib
+Include
