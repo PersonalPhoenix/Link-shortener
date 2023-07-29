@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{% static "image/pig.png" %}" type="image">
+    <link rel="stylesheet" href="{% static "style/normilize.css" %}">
+    <link rel="stylesheet" href="{% static "style/main.css" %}">
+    <title>PersonalPhoenix</title>
+</head>
+<body>
+    <main>
+        <div class="flex__column">
+            <div class="obch">
+                <div class="forms">
+                    <h2>Enter Your Long URL</h2>
+                    <form id="post-form">
+                        {% csrf_token %}
+                        <div class="text_field">
+                            <input class="text_field_icon" type="text" id="link" name='link' placeholder="https://www...">
+                        </div>
+                        <h2>Your shorten URL</h2>
+                        <section id="section">
+                            <input class="text_field_icon" type="text" readonly placeholder="{{ url_detail.url }}">
+                        </section>
+                        <div class="buttons">
+                            <button type="submit" id="shorten">Shortened It</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{% static "js/validation.js" %}"></script>
+</body>
+</html>
