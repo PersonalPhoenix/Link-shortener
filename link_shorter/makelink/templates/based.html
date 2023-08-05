@@ -16,13 +16,13 @@
                 <div class="forms">
                     <h2>Enter Your Long URL</h2>
                     <form id="post-form">
-                        {% csrf_token %}
                         <div class="text_field">
+                            {% csrf_token %}
                             <input class="text_field_icon" type="text" id="link" name='link' placeholder="https://www...">
                         </div>
                         <h2>Your shorten URL</h2>
                         <section id="section">
-                            <input class="text_field_icon" type="text" readonly placeholder="{{ url_detail.url }}">
+                            <input id="getting" class="text_field_icon" type="text" readonly placeholder="{{ url_detail.url }}">
                         </section>
                         <div class="buttons">
                             <button type="submit" id="shorten">Shortened It</button>
@@ -32,7 +32,7 @@
             </div>
         </div>
     </main>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="{% static "js/validation.js" %}"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="{% static "js/ajax.js" %}"></script>
 </body>
 </html>

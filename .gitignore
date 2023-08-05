@@ -1,11 +1,15 @@
 __pycache__
 
+# not for production :)
 webpack
 
+# private data
 .env
 
+# db
 db.sqlite3
 
+# venv
 pyvenv.cfg
 Scripts
 Lib
